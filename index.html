@@ -32,6 +32,7 @@
     border: solid 1px grey;
     border-radius: 50px;
     margin: 10px;
+    cursor: pointer;
   }
   #demo-fixed {
     display: none;
@@ -58,10 +59,16 @@
 <h1>UNIBOARD</h1>
 <p class="text">This is the practice site for Uniboard, a 25-key keyboard that can type all unicode characters that exist or will ever exist.</p>
 <h2 id="ready">Loading...</h2>
-<input class="input" type="text" id="demo-text">
+<div>
+  <div>
+    <button id="alph">Alphabet</button>
+    <button id="sentence">Sentence</button>
+  </div>
+  <input class="input" type="text" id="demo-text">
 <div class="input" id="demo-fixed"><span></span><span></span></div>
+</div>
 <div id="highlight"></div>
-<button>start</button>
+<button id="start">start</button>
 <div class="keyboard" id="demo">
 _ _ _ _   _ _ _ _
 _ _ _ _   _ _ _ _
