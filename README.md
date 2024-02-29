@@ -1,5 +1,5 @@
 ## UNIBOARD
-A 25-key keyboard that can type all UTF-8 characters that exist or will ever exist.
+A 25-key keyboard that can type all unicode characters that exist or will ever exist.
 ### Usage
 ```
 Make sure python 'keyboard' module is installed, use 'pip install keyboard'
