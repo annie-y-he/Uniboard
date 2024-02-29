@@ -94,9 +94,7 @@ def diagram():
   if int(down[24]):
     diagram[1][8] = '■'
 
-  for i in diagram:
-    file.write(' '.join(i))
-    file.write('\n')
+  return '\n'.join([' '.join(i) for i in diagram])
 
 def one_hand():
   positions = range(12)
@@ -114,6 +112,8 @@ def one_hand():
   return result
 
 all_keys = {}
+all_maps = {}
+all_js = {}
 counter = 0x0000
 both_hands = itertools.product(one_hand(), ['0', '1'], one_hand())
 for item in both_hands:
@@ -121,13 +121,24 @@ for item in both_hands:
   all_keys[concatenated] = counter
   counter += 1
 
-with open("mapping.txt", "w", encoding="utf-8") as file:
-  for k in all_keys:
+for k in all_keys:
+  try:
+    down = k
+    all_maps[chr(all_keys[k])] = diagram()
+  except:
+    pass
+
+for m in all_maps:
+  all_js[str(ord(m))] = all_maps[m]
+
+with open("mapping1.json", "w", encoding="utf-8") as file:
+  for m in all_maps:
     try:
-      down = k
-      file.write(chr(all_keys[k]) + '\n')
+      file.write(m + "\n")
+      file.write(all_maps[m] + "\n")
     except:
-      file.write('NA\n')
-    diagram()
-with open("mapping.json", "w") as file:
+      pass
+with open("mapping2.json", "w", encoding="utf-8") as file:
   file.write(re.sub(r"'", '"', re.sub(r",\s", ",\n", str(all_keys))))
+with open("mapping3.json", "w", encoding="utf-8") as file:
+  file.write(re.sub(r"'", '"', re.sub(r",\s", ",\n", str(all_js))))

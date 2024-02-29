@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Uniboard Practice</title>
+<style>
+  * {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  body {
+    background-color:honeydew;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  .keyboard {
+    white-space: pre;
+    width: fit-content;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px 50px;
+    border: solid 1px grey;
+  }
+  button {
+    width: 100px;
+    padding: 10px;
+    background-color: white;
+    border: solid 1px grey;
+    border-radius: 50px;
+    margin: 10px;
+  }
+  #demo-fixed {
+    display: none;
+    background-color: beige;
+  }
+  .input {
+    height: fit-content;
+    padding: 50px;
+    width: 500px;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    white-space: pre;
+  }
+  .text {
+    width: 50%;
+  }
+
+</style>
+</head>
+<body>
+<h1>UNIBOARD</h1>
+<p class="text">This is the practice site for Uniboard, a 25-key keyboard that can type all UTF-8 characters that exist or will ever exist.</p>
+<h2 id="ready">Loading...</h2>
+<input class="input" type="text" id="demo-text">
+<div class="input" id="demo-fixed"><span></span><span></span></div>
+<div id="highlight"></div>
+<button>start</button>
+<div class="keyboard" id="demo">
+_ _ _ _   _ _ _ _
+_ _ _ _   _ _ _ _
+_ _ _ _   _ _ _ _
+    _ _ _ _ _    
+</div>
+<div class="keyboard" id="char"></div>
+<div class="keyboard" id="board">
+_ _ _ _   _ _ _ _
+_ _ _ _   _ _ _ _
+_ _ _ _   _ _ _ _
+    _ _ _ _ _    
+</div>
+<script src="script.js"></script>
+</body>
+</html>
