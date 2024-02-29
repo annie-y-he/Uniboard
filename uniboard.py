@@ -1,5 +1,4 @@
 import keyboard
-import keyboard
 import itertools
 
 L1 = 'a'
