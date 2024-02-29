@@ -67,7 +67,9 @@ Promise.all([
   });
 
   document.addEventListener("keydown", (event) => {
-    event.preventDefault();
+    if (event.target.tagName == 'BUTTON') {
+      event.preventDefault();
+    }
     down[keymap[event.key]] = "1"
     board.textContent = data1[data2[down.join("")].toString()]
     if (board.textContent == demo.textContent) {
