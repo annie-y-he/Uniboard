@@ -26,6 +26,17 @@ keymap = {
   ';': 24,
 }
 
+alph = [
+  "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz",
+  "กาขาฃาคาฅาฆางาจาฉาชาซาฌาญาฎาฏาฐาฑาฒาณาดาตาถาทาธานาบาปาผาฝาพาฟาภามายาราลาวาศาษาสาหาฬาอาฮา",
+  "的我你是了不在他有这个上们来到时大地为子中你说生国年着就那和要她出也得里后自以会家可下而过天去能对小多然于心学之都好看起发成业外相",
+  "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÄäÖöÜüẞß"
+]
+
+sentence = [
+  "The quick brown fox jumps over the lazy dog"
+]
+
 Promise.all([
   fetch('https://annie-he.com/files/mapping3.json').then(response => response.json()),
   fetch('https://annie-he.com/files/mapping2.json').then(response => response.json())
